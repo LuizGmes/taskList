@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AtividadeViewController" customModule="ListaAtividades" customModuleProvider="target">
+            <connections>
+                <outlet property="dpData" destination="lWh-lb-jkE" id="EoB-Ph-ENQ"/>
+                <outlet property="tfDescricao" destination="4PN-DY-b8p" id="WmG-OW-f23"/>
+                <outlet property="view" destination="VnM-SK-aR6" id="lrE-JN-VSV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="VnM-SK-aR6">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição da Atividade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4PN-DY-b8p">
+                    <rect key="frame" x="24" y="68" width="366" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lWh-lb-jkE">
+                    <rect key="frame" x="24" y="140" width="366" height="140"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="Ggx-56-df6"/>
+                    </constraints>
+                </datePicker>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data da Atividade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA5-gY-lll">
+                    <rect key="frame" x="24" y="112" width="366" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="textColor" red="0.95686274510000002" green="0.4039215686" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH7-nn-7n0">
+                    <rect key="frame" x="24" y="296" width="366" height="40"/>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.4039215686" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="sPx-cs-fY1"/>
+                    </constraints>
+                    <state key="normal" title="Cadastrar Atividade">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="salvarAtividade:" destination="-1" eventType="touchUpInside" id="FaU-M5-Ce5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vA5-gY-lll" firstAttribute="width" secondItem="4PN-DY-b8p" secondAttribute="width" id="0r3-s0-ufu"/>
+                <constraint firstItem="PH7-nn-7n0" firstAttribute="top" secondItem="lWh-lb-jkE" secondAttribute="bottom" constant="16" id="1sy-21-seU"/>
+                <constraint firstItem="vA5-gY-lll" firstAttribute="top" secondItem="4PN-DY-b8p" secondAttribute="bottom" constant="10" id="2si-04-kA7"/>
+                <constraint firstItem="4PN-DY-b8p" firstAttribute="leading" secondItem="Noq-Td-Mom" secondAttribute="leading" constant="24" id="5FV-Sq-EDK"/>
+                <constraint firstItem="lWh-lb-jkE" firstAttribute="centerX" secondItem="4PN-DY-b8p" secondAttribute="centerX" id="DoC-UV-ary"/>
+                <constraint firstItem="vA5-gY-lll" firstAttribute="leading" secondItem="4PN-DY-b8p" secondAttribute="leading" id="Hy2-rM-QBs"/>
+                <constraint firstItem="lWh-lb-jkE" firstAttribute="width" secondItem="4PN-DY-b8p" secondAttribute="width" id="KDo-rp-4qc"/>
+                <constraint firstItem="PH7-nn-7n0" firstAttribute="width" secondItem="4PN-DY-b8p" secondAttribute="width" id="OfH-P4-UQ3"/>
+                <constraint firstItem="lWh-lb-jkE" firstAttribute="top" secondItem="vA5-gY-lll" secondAttribute="bottom" constant="10" id="Q8N-i8-jby"/>
+                <constraint firstItem="Noq-Td-Mom" firstAttribute="trailing" secondItem="4PN-DY-b8p" secondAttribute="trailing" constant="24" id="XV3-GR-Nqu"/>
+                <constraint firstItem="4PN-DY-b8p" firstAttribute="top" secondItem="Noq-Td-Mom" secondAttribute="top" constant="24" id="fj2-Tj-ckQ"/>
+                <constraint firstItem="PH7-nn-7n0" firstAttribute="centerX" secondItem="4PN-DY-b8p" secondAttribute="centerX" id="kYB-pp-ac0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Noq-Td-Mom"/>
+            <point key="canvasLocation" x="141" y="90"/>
+        </view>
+    </objects>
+</document>
